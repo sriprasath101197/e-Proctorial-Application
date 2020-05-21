@@ -1,0 +1,170 @@
+<!DOCTYPE>
+<html>
+<head>
+
+<script>
+function fun()
+{
+alert("this page is loading");
+}
+</script>
+</head>
+</head>
+<style>
+div
+{
+color:white;
+font-family:"Times new roman";
+font-size:20px;
+}
+
+body
+{ 
+background-image:url("down.jpg");
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+    border-right:1px solid white;
+}
+
+li:last-child {
+    border-right: green;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.right
+{
+   float: right;
+    width: 300px;
+    
+    padding: 10px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid violet;
+}
+
+p
+{
+font-size:40px;
+
+}
+div.cities {
+    background-color: black;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 5px;
+width:70%;
+} 
+</style>
+ 
+</head>
+<body onload="fun()">
+<script>
+function colors(x)
+{
+
+x.style.color="cyan";
+}
+function colors1(x)
+{
+
+x.style.color="white";
+}
+function finish()
+{
+alert("successully submitted");
+}
+function make()
+{
+alert("Firstly create an account ");
+}
+function fault() {
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
+function fault1() {
+    var x = document.getElementById("lname");
+    x.value = x.value.toUpperCase();
+}
+function gm() {
+    var x = document.getElementById("mail");
+    x.value = x.value.toLowerCase();
+}
+function message() {
+    alert("This alert box was triggered by the onreset event handler");
+}
+function foc(x) {
+x.style.background="cyan";
+}
+
+</script>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+<li onclick="make()"><a href="#login" >Login</a></li>  
+<li style="float:right"><a href="#about">About</a></li>
+</ul>
+<div class="right">
+
+<p onmouseover="colors(this)" onmouseout="colors1(this)">Create Account</p>
+<form onreset="message()">
+  First Name :<br>
+  <input type="text" id="fname" name="first" onblur="fault()">
+last Name :<br>
+  <input type="text" id="lname" name="last" onblur="fault1()">
+  Mail id :<br>
+  <input type="text" id="mail" name="mails" onblur="gm()">
+  Department :<br>
+  <input type="text" id="dp" name="depart" onfocus="foc(this)">
+  User name :<br>
+  <input type="text" id="usn" name="user">
+  Password :<br>
+  <input type="text" id="pass" name="password">
+  
+  
+contact no :<br>
+  <input type="number" id="no" name="number"><br>
+    
+  Age :<br>
+  <input type="number" id="ag" name="age"><br><br>
+  <button onclick="finish()">submit</button><br>  <br>
+<input type="reset">
+
+</form>
+</div>
+
+<div class="cities">
+<h2>e-PrOcToRiAl</h2>
+<p>An application especially to teacher.They can track thier proctor student easily and in effective manner.Interaction between students and staff may get developed.....time to make</p>
+</div>
+
+</body>
+</html>
